@@ -15037,6 +15037,288 @@ Requirement already satisfied: zipp&gt;=0.5 in ./env/lib/python3.6/site-packages
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_dados_sudeste</span> <span class="o">=</span> <span class="n">df_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_dados</span><span class="p">[</span><span class="s1">&#39;Regiões&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Sudeste&quot;</span><span class="p">]</span>
+<span class="n">df_dados_sudeste</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[60]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>sex</th>
+      <th>bmi</th>
+      <th>children</th>
+      <th>smoker</th>
+      <th>region</th>
+      <th>charges</th>
+      <th>insuranceclaim</th>
+      <th>Fumante</th>
+      <th>imc ideal</th>
+      <th>faixa etária</th>
+      <th>Regiões</th>
+      <th>Nordeste</th>
+      <th>Noroeste</th>
+      <th>Sudeste</th>
+      <th>Sudoeste</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>18</td>
+      <td>1</td>
+      <td>33.77</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1725.5523</td>
+      <td>1</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>até 30 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>28</td>
+      <td>1</td>
+      <td>33.00</td>
+      <td>3</td>
+      <td>0</td>
+      <td>2</td>
+      <td>4449.4620</td>
+      <td>0</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>até 30 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>31</td>
+      <td>0</td>
+      <td>25.74</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>3756.6216</td>
+      <td>0</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>De 31 anos a 40 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>46</td>
+      <td>0</td>
+      <td>33.44</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>8240.5896</td>
+      <td>1</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>De 41 anos a 50 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>62</td>
+      <td>0</td>
+      <td>26.29</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>27808.7251</td>
+      <td>1</td>
+      <td>Sim</td>
+      <td>Não</td>
+      <td>Acima de 60 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1322</th>
+      <td>62</td>
+      <td>1</td>
+      <td>38.83</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>12981.3457</td>
+      <td>1</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Acima de 60 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>1323</th>
+      <td>42</td>
+      <td>0</td>
+      <td>40.37</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>43896.3763</td>
+      <td>1</td>
+      <td>Sim</td>
+      <td>Não</td>
+      <td>De 41 anos a 50 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>1327</th>
+      <td>51</td>
+      <td>1</td>
+      <td>30.03</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>9377.9047</td>
+      <td>1</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>De 51 anos a 60 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>1330</th>
+      <td>57</td>
+      <td>0</td>
+      <td>25.74</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>12629.1656</td>
+      <td>1</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>De 51 anos a 60 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+    <tr>
+      <th>1335</th>
+      <td>18</td>
+      <td>0</td>
+      <td>36.85</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1629.8335</td>
+      <td>1</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>até 30 anos</td>
+      <td>Sudeste</td>
+      <td>Não</td>
+      <td>Não</td>
+      <td>Sim</td>
+      <td>Não</td>
+    </tr>
+  </tbody>
+</table>
+<p>364 rows × 16 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -15318,10 +15600,10 @@ Requirement already satisfied: zipp&gt;=0.5 in ./env/lib/python3.6/site-packages
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes_sudeste</span> <span class="o">=</span> <span class="n">df_dados</span><span class="p">[[</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span><span class="s1">&#39;Sudeste&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes_sudeste</span> <span class="o">=</span> <span class="n">df_dados_sudeste</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()[[</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span><span class="s1">&#39;Sudeste&#39;</span><span class="p">]]</span>
 <span class="n">clientes_sudeste</span>
 </pre></div>
 
@@ -15335,7 +15617,7 @@ Requirement already satisfied: zipp&gt;=0.5 in ./env/lib/python3.6/site-packages
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[56]:</div>
+    <div class="prompt output_prompt">Out[61]:</div>
 
 
 
@@ -15366,27 +15648,713 @@ Requirement already satisfied: zipp&gt;=0.5 in ./env/lib/python3.6/site-packages
     <tr>
       <th>0</th>
       <td>Acima de 60 anos</td>
-      <td>91</td>
+      <td>25</td>
     </tr>
     <tr>
       <th>1</th>
       <td>De 31 anos a 40 anos</td>
-      <td>257</td>
+      <td>69</td>
     </tr>
     <tr>
       <th>2</th>
       <td>De 41 anos a 50 anos</td>
-      <td>281</td>
+      <td>78</td>
     </tr>
     <tr>
       <th>3</th>
       <td>De 51 anos a 60 anos</td>
-      <td>265</td>
+      <td>69</td>
     </tr>
     <tr>
       <th>4</th>
       <td>até 30 anos</td>
-      <td>444</td>
+      <td>123</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">clientes_sudeste</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Clientes por faixa etária no Sudeste&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Faixa etária&#39;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Sudeste&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Quantidade de clientes&#39;</span><span class="p">),</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[68]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<div id="altair-viz-3f331d906db344f7ad079f013f09118a"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    const outputDiv = document.getElementById("altair-viz-3f331d906db344f7ad079f013f09118a");
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-21769996dd4e8eabc5729a9a82ea3b7e"}, "mark": "bar", "encoding": {"color": {"type": "nominal", "field": "faixa et\u00e1ria", "legend": null}, "x": {"type": "nominal", "field": "faixa et\u00e1ria", "title": "Faixa et\u00e1ria"}, "y": {"type": "quantitative", "field": "Sudeste", "title": "Quantidade de clientes"}}, "selection": {"selector016": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "title": "Clientes por faixa et\u00e1ria no Sudeste", "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json", "datasets": {"data-21769996dd4e8eabc5729a9a82ea3b7e": [{"faixa et\u00e1ria": "Acima de 60 anos", "Sudeste": 25}, {"faixa et\u00e1ria": "De 31 anos a 40 anos", "Sudeste": 69}, {"faixa et\u00e1ria": "De 41 anos a 50 anos", "Sudeste": 78}, {"faixa et\u00e1ria": "De 51 anos a 60 anos", "Sudeste": 69}, {"faixa et\u00e1ria": "at\u00e9 30 anos", "Sudeste": 123}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_dados_sudoeste</span> <span class="o">=</span> <span class="n">df_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_dados</span><span class="p">[</span><span class="s1">&#39;Regiões&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Sudoeste&quot;</span><span class="p">]</span>
+<span class="n">df_dados_nordeste</span> <span class="o">=</span> <span class="n">df_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_dados</span><span class="p">[</span><span class="s1">&#39;Regiões&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Nordeste&quot;</span><span class="p">]</span>
+<span class="n">df_dados_noroeste</span> <span class="o">=</span> <span class="n">df_dados</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_dados</span><span class="p">[</span><span class="s1">&#39;Regiões&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Noroeste&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes_sudoeste</span> <span class="o">=</span> <span class="n">df_dados_sudoeste</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()[[</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span><span class="s1">&#39;Sudoeste&#39;</span><span class="p">]]</span>
+<span class="n">clientes_nordeste</span> <span class="o">=</span> <span class="n">df_dados_nordeste</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()[[</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span><span class="s1">&#39;Nordeste&#39;</span><span class="p">]]</span>
+<span class="n">clientes_noroeste</span> <span class="o">=</span> <span class="n">df_dados_noroeste</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()[[</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span><span class="s1">&#39;Noroeste&#39;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">clientes_sudoeste</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Clientes por faixa etária no Sudoeste&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Faixa etária&#39;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Sudoeste&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Quantidade de clientes&#39;</span><span class="p">),</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[73]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<div id="altair-viz-c211c25efd9a4e58893da82381ffe4f4"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    const outputDiv = document.getElementById("altair-viz-c211c25efd9a4e58893da82381ffe4f4");
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-5307cb165f18dbdf9d800e5b58dde940"}, "mark": "bar", "encoding": {"color": {"type": "nominal", "field": "faixa et\u00e1ria", "legend": null}, "x": {"type": "nominal", "field": "faixa et\u00e1ria", "title": "Faixa et\u00e1ria"}, "y": {"type": "quantitative", "field": "Sudoeste", "title": "Quantidade de clientes"}}, "selection": {"selector018": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "title": "Clientes por faixa et\u00e1ria no Sudoeste", "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json", "datasets": {"data-5307cb165f18dbdf9d800e5b58dde940": [{"faixa et\u00e1ria": "Acima de 60 anos", "Sudoeste": 22}, {"faixa et\u00e1ria": "De 31 anos a 40 anos", "Sudoeste": 62}, {"faixa et\u00e1ria": "De 41 anos a 50 anos", "Sudoeste": 69}, {"faixa et\u00e1ria": "De 51 anos a 60 anos", "Sudoeste": 66}, {"faixa et\u00e1ria": "at\u00e9 30 anos", "Sudoeste": 106}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">clientes_nordeste</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Clientes por faixa etária no Nordeste&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Faixa etária&#39;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Nordeste&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Quantidade de clientes&#39;</span><span class="p">),</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[74]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<div id="altair-viz-7bc9605c41bf48fe8fa30448f5cd9ffe"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    const outputDiv = document.getElementById("altair-viz-7bc9605c41bf48fe8fa30448f5cd9ffe");
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-07178a6e7a07b60a439700ee0be20f75"}, "mark": "bar", "encoding": {"color": {"type": "nominal", "field": "faixa et\u00e1ria", "legend": null}, "x": {"type": "nominal", "field": "faixa et\u00e1ria", "title": "Faixa et\u00e1ria"}, "y": {"type": "quantitative", "field": "Nordeste", "title": "Quantidade de clientes"}}, "selection": {"selector019": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "title": "Clientes por faixa et\u00e1ria no Nordeste", "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json", "datasets": {"data-07178a6e7a07b60a439700ee0be20f75": [{"faixa et\u00e1ria": "Acima de 60 anos", "Nordeste": 21}, {"faixa et\u00e1ria": "De 31 anos a 40 anos", "Nordeste": 62}, {"faixa et\u00e1ria": "De 41 anos a 50 anos", "Nordeste": 68}, {"faixa et\u00e1ria": "De 51 anos a 60 anos", "Nordeste": 66}, {"faixa et\u00e1ria": "at\u00e9 30 anos", "Nordeste": 107}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">clientes_noroeste</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Clientes por faixa etária no Noroeste&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Faixa etária&#39;</span><span class="p">),</span>
+    <span class="n">y</span><span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Noroeste&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Quantidade de clientes&#39;</span><span class="p">),</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;faixa etária&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[75]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<div id="altair-viz-c46bc65a94e94fb99e5d16a1e6fecd84"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    const outputDiv = document.getElementById("altair-viz-c46bc65a94e94fb99e5d16a1e6fecd84");
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-08749b065e7ab0ef998be52552dd1b5c"}, "mark": "bar", "encoding": {"color": {"type": "nominal", "field": "faixa et\u00e1ria", "legend": null}, "x": {"type": "nominal", "field": "faixa et\u00e1ria", "title": "Faixa et\u00e1ria"}, "y": {"type": "quantitative", "field": "Noroeste", "title": "Quantidade de clientes"}}, "selection": {"selector020": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}, "title": "Clientes por faixa et\u00e1ria no Noroeste", "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json", "datasets": {"data-08749b065e7ab0ef998be52552dd1b5c": [{"faixa et\u00e1ria": "Acima de 60 anos", "Noroeste": 23}, {"faixa et\u00e1ria": "De 31 anos a 40 anos", "Noroeste": 64}, {"faixa et\u00e1ria": "De 41 anos a 50 anos", "Noroeste": 66}, {"faixa et\u00e1ria": "De 51 anos a 60 anos", "Noroeste": 64}, {"faixa et\u00e1ria": "at\u00e9 30 anos", "Noroeste": 108}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes_noroeste</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[77]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>faixa etária</th>
+      <th>Noroeste</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Acima de 60 anos</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>De 31 anos a 40 anos</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>De 41 anos a 50 anos</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>De 51 anos a 60 anos</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>até 30 anos</td>
+      <td>108</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes_nordeste</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[78]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>faixa etária</th>
+      <th>Nordeste</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Acima de 60 anos</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>De 31 anos a 40 anos</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>De 41 anos a 50 anos</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>De 51 anos a 60 anos</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>até 30 anos</td>
+      <td>107</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes_sudoeste</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[79]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>faixa etária</th>
+      <th>Sudoeste</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Acima de 60 anos</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>De 31 anos a 40 anos</td>
+      <td>62</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>De 41 anos a 50 anos</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>De 51 anos a 60 anos</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>até 30 anos</td>
+      <td>106</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">clientes_sudeste</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[80]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>faixa etária</th>
+      <th>Sudeste</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Acima de 60 anos</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>De 31 anos a 40 anos</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>De 41 anos a 50 anos</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>De 51 anos a 60 anos</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>até 30 anos</td>
+      <td>123</td>
     </tr>
   </tbody>
 </table>
